@@ -1,4 +1,4 @@
-import DFBnB
+# import DFBnB
 import IDAStar
 import random
 import csv
@@ -56,16 +56,16 @@ if __name__ == "__main__":
     is_goal = lambda p: p == pancake_goal(p)
 
     pancake_piles = []
-    for i in range(25):
-        pile = generate_pancake_pile(8)
+    for i in range(100):
+        pile = generate_pancake_pile(10)
         pancake_piles.append(pile)
-    for i in range(25):
-        pile = generate_pancake_pile(15)
-        pancake_piles.append(pile)
+    # for i in range(25):
+    #     pile = generate_pancake_pile(15)
+    #     pancake_piles.append(pile)
 
     idastar_solver = IDAStar.IDAStar(pancake_h, pancake_neighbours)
 
-    dfbnb_solver = DFBnB.DFBnB(pancake_h, pancake_neighbours)
+    # dfbnb_solver = DFBnB.DFBnB(pancake_h, pancake_neighbours)
 
     results = []
 
@@ -76,13 +76,7 @@ if __name__ == "__main__":
         print("cost:", cost, "num_generated:", num_eval)
         pile_result = pancake_test(p, optimal_cost, cost, num_eval, 'IDA*', 0)
         results.append(pile_result.to_dict())
-        print("start of DFBnB")
-        ida_cost = cost
-        for bound in range(70, 20, -10):
-            path, moves, cost, num_eval = dfbnb_solver.solve(p, is_goal, bound)
-            print("cost:", cost, "num_generated:", num_eval)
-            pile_result = pancake_test(p,optimal_cost, cost, num_eval, 'DFBnB', bound)
-            results.append(pile_result.to_dict())
+
 
     keys = results[0].keys()
 
@@ -90,4 +84,3 @@ if __name__ == "__main__":
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(results)
-

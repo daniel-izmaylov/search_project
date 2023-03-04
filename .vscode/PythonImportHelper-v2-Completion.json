@@ -1,0 +1,425 @@
+[
+    {
+        "label": "IDAStar",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "IDAStar",
+        "description": "IDAStar",
+        "detail": "IDAStar",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "itertools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "itertools",
+        "description": "itertools",
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "repeat",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "multiprocessing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "Pool",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPool",
+        "importPath": "multiprocessing.pool",
+        "description": "multiprocessing.pool",
+        "isExtraImport": true,
+        "detail": "multiprocessing.pool",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "pandarallel",
+        "importPath": "pandarallel",
+        "description": "pandarallel",
+        "isExtraImport": true,
+        "detail": "pandarallel",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm.notebook",
+        "description": "tqdm.notebook",
+        "isExtraImport": true,
+        "detail": "tqdm.notebook",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_neighbours",
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "isExtraImport": true,
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "ast",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ast",
+        "description": "ast",
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
+        "label": "slide_neighbours",
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "isExtraImport": true,
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "applyparallel",
+        "importPath": "multiprocesspandas",
+        "description": "multiprocesspandas",
+        "isExtraImport": true,
+        "detail": "multiprocesspandas",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "DFBnB",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "DFBnB",
+        "description": "DFBnB",
+        "detail": "DFBnB",
+        "documentation": {}
+    },
+    {
+        "label": "DFBnB",
+        "kind": 6,
+        "importPath": "DFBnB",
+        "description": "DFBnB",
+        "peekOfCode": "class DFBnB:\n    def __init__(self, h, neighbours):\n        \"\"\" Iterative-deepening A* search.\n        h(n) is the heuristic that gives the cost between node n and the goal node. It must be admissable, meaning that h(n) MUST NEVER OVERSTIMATE the true cost. Underestimating is fine.\n        neighbours(n) is an iterable giving a pair (cost, node, descr) for each node neighbouring n\n        IN ASCENDING ORDER OF COST. descr is not used in the computation but can be used to\n        efficiently store information about the path edges (e.g. up/left/right/down for grids).\n        \"\"\"\n        self.h = h\n        self.neighbours = neighbours",
+        "detail": "DFBnB",
+        "documentation": {}
+    },
+    {
+        "label": "IDAStar",
+        "kind": 6,
+        "importPath": "IDAStar",
+        "description": "IDAStar",
+        "peekOfCode": "class IDAStar:\n    def __init__(self, h, neighbours):\n        \"\"\" Iterative-deepening A* search.\n        h(n) is the heuristic that gives the cost between node n and the goal node. It must be admissable, meaning that h(n) MUST NEVER OVERSTIMATE the true cost. Underestimating is fine.\n        neighbours(n) is an iterable giving a pair (cost, node, descr) for each node neighbouring n\n        IN ASCENDING ORDER OF COST. descr is not used in the computation but can be used to\n        efficiently store information about the path edges (e.g. up/left/right/down for grids).\n        \"\"\"\n        self.h = h\n        self.neighbours = neighbours",
+        "detail": "IDAStar",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_test",
+        "kind": 6,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "class pancake_test:\n    def __init__(self,p, optimal_cost, cost, num_eval, algorithm, bound):\n        self.p = p\n        self.cost = cost\n        self.optimal_cost = optimal_cost\n        self.num_eval = num_eval\n        self.algorithm = algorithm\n        self.bound = bound\n        self.length = len(p)\n    def to_dict(self):",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_neighbours",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def pancake_neighbours(state):\n    for i in range(2, len(state) + 1):\n        next_state = state[:i][::-1] + state[i:]\n        yield (1, next_state, i)\ndef pancake_actions(state): # all flipping possible indices, no point to flip the top only\n    return range(2, len(state) + 1)\ndef result(state, i):  #i is possible index of flip taken from actions\n    return state[:i][::-1] + state[i:]\ndef pancake_h(s): #s is the state -  a tuple of length n\n    return sum(abs(s[i] - s[i - 1]) > 1 for i in range(1, len(s)))",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_actions",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def pancake_actions(state): # all flipping possible indices, no point to flip the top only\n    return range(2, len(state) + 1)\ndef result(state, i):  #i is possible index of flip taken from actions\n    return state[:i][::-1] + state[i:]\ndef pancake_h(s): #s is the state -  a tuple of length n\n    return sum(abs(s[i] - s[i - 1]) > 1 for i in range(1, len(s)))\ndef pancake_goal(state):\n    return tuple(sorted(state))\ndef generate_pancake_pile(n):\n    test = list(range(1, n+1))",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def result(state, i):  #i is possible index of flip taken from actions\n    return state[:i][::-1] + state[i:]\ndef pancake_h(s): #s is the state -  a tuple of length n\n    return sum(abs(s[i] - s[i - 1]) > 1 for i in range(1, len(s)))\ndef pancake_goal(state):\n    return tuple(sorted(state))\ndef generate_pancake_pile(n):\n    test = list(range(1, n+1))\n    random.shuffle(test)\n    return tuple(test)",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_h",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def pancake_h(s): #s is the state -  a tuple of length n\n    return sum(abs(s[i] - s[i - 1]) > 1 for i in range(1, len(s)))\ndef pancake_goal(state):\n    return tuple(sorted(state))\ndef generate_pancake_pile(n):\n    test = list(range(1, n+1))\n    random.shuffle(test)\n    return tuple(test)\nclass pancake_test:\n    def __init__(self,p, optimal_cost, cost, num_eval, algorithm, bound):",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "pancake_goal",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def pancake_goal(state):\n    return tuple(sorted(state))\ndef generate_pancake_pile(n):\n    test = list(range(1, n+1))\n    random.shuffle(test)\n    return tuple(test)\nclass pancake_test:\n    def __init__(self,p, optimal_cost, cost, num_eval, algorithm, bound):\n        self.p = p\n        self.cost = cost",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "generate_pancake_pile",
+        "kind": 2,
+        "importPath": "flip_pancake",
+        "description": "flip_pancake",
+        "peekOfCode": "def generate_pancake_pile(n):\n    test = list(range(1, n+1))\n    random.shuffle(test)\n    return tuple(test)\nclass pancake_test:\n    def __init__(self,p, optimal_cost, cost, num_eval, algorithm, bound):\n        self.p = p\n        self.cost = cost\n        self.optimal_cost = optimal_cost\n        self.num_eval = num_eval",
+        "detail": "flip_pancake",
+        "documentation": {}
+    },
+    {
+        "label": "h",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def h(state):\n    return sum(abs(state[i]-state[i-1])>1 for i in range(1,len(state)))\ndef p_and_h(state):\n    state= np.random.permutation(state)\n    return h(state)\ndef permutation_and_h(n,n_limit=100):\n    h_dict=defaultdict(int)\n    init_list= list(range(1,n+1))\n    # res_list= list(map(lambda x: sum(abs(x[i]-x[i-1])>1 for i in range(1,len(x))), [list(x)for x in itertools.permutations(init_list)]))\n    # per_list= list(itertools.islice(itertools.permutations(init_list), 3,8))",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "p_and_h",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def p_and_h(state):\n    state= np.random.permutation(state)\n    return h(state)\ndef permutation_and_h(n,n_limit=100):\n    h_dict=defaultdict(int)\n    init_list= list(range(1,n+1))\n    # res_list= list(map(lambda x: sum(abs(x[i]-x[i-1])>1 for i in range(1,len(x))), [list(x)for x in itertools.permutations(init_list)]))\n    # per_list= list(itertools.islice(itertools.permutations(init_list), 3,8))\n    # per_list=[ np.random.permutation(init_list) for i in range(n_limit)]\n    res_list= list(pool.map(p_and_h, repeat(init_list,n_limit)))",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "permutation_and_h",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def permutation_and_h(n,n_limit=100):\n    h_dict=defaultdict(int)\n    init_list= list(range(1,n+1))\n    # res_list= list(map(lambda x: sum(abs(x[i]-x[i-1])>1 for i in range(1,len(x))), [list(x)for x in itertools.permutations(init_list)]))\n    # per_list= list(itertools.islice(itertools.permutations(init_list), 3,8))\n    # per_list=[ np.random.permutation(init_list) for i in range(n_limit)]\n    res_list= list(pool.map(p_and_h, repeat(init_list,n_limit)))\n    for i in res_list:\n        h_dict[i]+=1\n    total_h= sum(h_dict.values())        ",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "calcalute_KRE",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def calcalute_KRE(d,problem_size):\n    p=all_dict_h[problem_size]\n    b=problem_size-1\n    sum_res=0\n    for i in range(0,d+1):\n        sum_res+=b**i*p[d-i]\n    return sum_res\ndef cacalute_per_state_h(state):\n    # state=list(np.random.permutation(state))\n    lst=[]",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "cacalute_per_state_h",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def cacalute_per_state_h(state):\n    # state=list(np.random.permutation(state))\n    lst=[]\n    h_state=h(state)\n    for neighbor in pancake_neighbours(list(state)):\n        neighbor=neighbor[1]\n        h_neighbor= h(neighbor)\n        lst.append(h_neighbor)\n    return h_state,lst\ndef condisinal_h(n,n_limit=100):",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "condisinal_h",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def condisinal_h(n,n_limit=100):\n    dict_h={}\n    init_list= list(range(1,n+1))\n    for i in range (n):\n        dict_h[i]=defaultdict(int)\n    res_lst=[ list(np.random.permutation(init_list)) for i in range(n_limit)]\n    # res_lst=[ list(np.random.permutation(init_list)) for i in range(n_limit)]\n    res_lst= pool.map(cacalute_per_state_h, res_lst)\n    # res_lst= pool.map(cacalute_per_state_h, repeat(init_list,n_limit))\n    # for father_h, neighbours_h_lst in pool.map(cacalute_per_state_h, repeat(init_list,n_limit)):",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "helper",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def helper(x):\n    return calcalute_KRE(x[\"optimal_cost\"],x[\"problem_size\"])\n# pandarallel.initialize(progress_bar=True)\nfrom multiprocesspandas import applyparallel\ndef calcalute_CDP(s,d):\n    sum_res=0\n    for i in range (0,d+1):\n        for v in range (0,d-i+1):\n            sum_res+=calcalute_CDP_helper(i,s,v,d)\n    return sum_res",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "calcalute_CDP",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def calcalute_CDP(s,d):\n    sum_res=0\n    for i in range (0,d+1):\n        for v in range (0,d-i+1):\n            sum_res+=calcalute_CDP_helper(i,s,v,d)\n    return sum_res\ndef calcalute_CDP_helper(i,s,v,d):\n    state_h=h(s)\n    b=len(s)-1\n    problem_size=len(s)",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "calcalute_CDP_helper",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def calcalute_CDP_helper(i,s,v,d):\n    state_h=h(s)\n    b=len(s)-1\n    problem_size=len(s)\n    local_dict=all_dict_condisonal_h[problem_size]\n    if i==0 and v==state_h:\n        return 1 \n    if i==0 and v!=state_h:\n        return 0\n    else:",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "helper_cdp",
+        "kind": 2,
+        "importPath": "predection_2",
+        "description": "predection_2",
+        "peekOfCode": "def helper_cdp(x):\n    return calcalute_CDP(ast.literal_eval(x[\"start\"]),x[\"optimal_cost\"])\nimport os\nif __name__ == '__main__':\n    pandarallel.initialize(progress_bar=False)\n    print(multiprocessing.cpu_count())\n    pool=Pool(multiprocessing.cpu_count())\n    # pool=ThreadPool(32)\n    # print(1)\n    n=10",
+        "detail": "predection_2",
+        "documentation": {}
+    },
+    {
+        "label": "puzzle_test",
+        "kind": 6,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "class puzzle_test:\n    def __init__(self, p, optimal_cost, cost, num_eval, algorithm, bound):\n        self.p = p\n        self.cost = cost\n        self.optimal_cost = optimal_cost\n        self.num_eval = num_eval\n        self.algorithm = algorithm\n        self.bound = bound\n        self.length = len(p)\n    def to_dict(self):",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "slide_solved_state",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def slide_solved_state(n):\n    return tuple(i % (n * n) for i in range(1, n * n + 1))\ndef slide_randomize(p, neighbours):\n    for _ in range(len(p) ** 2):\n        _, p, _ = random.choice(list(neighbours(p)))\n    return p\ndef slide_neighbours(n):\n    movelist = []\n    for gap in range(n * n):\n        x, y = gap % n, gap // n",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "slide_randomize",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def slide_randomize(p, neighbours):\n    for _ in range(len(p) ** 2):\n        _, p, _ = random.choice(list(neighbours(p)))\n    return p\ndef slide_neighbours(n):\n    movelist = []\n    for gap in range(n * n):\n        x, y = gap % n, gap // n\n        moves = []\n        if x > 0: moves.append(-1)  # Move the gap left.",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "slide_neighbours",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def slide_neighbours(n):\n    movelist = []\n    for gap in range(n * n):\n        x, y = gap % n, gap // n\n        moves = []\n        if x > 0: moves.append(-1)  # Move the gap left.\n        if x < n - 1: moves.append(+1)  # Move the gap right.\n        if y > 0: moves.append(-n)  # Move the gap up.\n        if y < n - 1: moves.append(+n)  # Move the gap down.\n        movelist.append(moves)",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "slide_print",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def slide_print(p):\n    n = int(round(len(p) ** 0.5))\n    l = len(str(n * n))\n    for i in range(0, len(p), n):\n        print(\" \".join(\"{:>{}}\".format(x, l) for x in p[i:i + n]))\ndef encode_cfg(cfg, n):\n    r = 0\n    b = n.bit_length()\n    for i in range(len(cfg)):\n        r |= cfg[i] << (b * i)",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "encode_cfg",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def encode_cfg(cfg, n):\n    r = 0\n    b = n.bit_length()\n    for i in range(len(cfg)):\n        r |= cfg[i] << (b * i)\n    return r\ndef gen_wd_table(n):\n    goal = [[0] * i + [n] + [0] * (n - 1 - i) for i in range(n)]\n    goal[-1][-1] = n - 1\n    goal = tuple(sum(goal, []))",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "gen_wd_table",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def gen_wd_table(n):\n    goal = [[0] * i + [n] + [0] * (n - 1 - i) for i in range(n)]\n    goal[-1][-1] = n - 1\n    goal = tuple(sum(goal, []))\n    table = {}\n    to_visit = [(goal, 0, n - 1)]\n    while to_visit:\n        cfg, cost, e = to_visit.pop(0)\n        enccfg = encode_cfg(cfg, n)\n        if enccfg in table: continue",
+        "detail": "slide_tile",
+        "documentation": {}
+    },
+    {
+        "label": "slide_wd",
+        "kind": 2,
+        "importPath": "slide_tile",
+        "description": "slide_tile",
+        "peekOfCode": "def slide_wd(n, goal):\n    wd = gen_wd_table(n)\n    goals = {i: goal.index(i) for i in goal}\n    b = n.bit_length()\n    def h(p):\n        ht = 0  # Walking distance between rows.\n        vt = 0  # Walking distance between columns.\n        d = 0\n        for i, c in enumerate(p):\n            if c == 0: continue",
+        "detail": "slide_tile",
+        "documentation": {}
+    }
+]
